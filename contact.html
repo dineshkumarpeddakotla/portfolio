@@ -37,9 +37,8 @@
           <!-- Contact information -->
           <div class="contact-info">
             <img src="images/contact.png" alt="Contact icon" class="contact-icon">
-            <p><strong>Phone:</strong> +91 630 147 7956</p>
-            <p><strong>Email:</strong> dineshkumarkokku@gmail.com</p>
-            <p><strong>Location:</strong> Visakhapatnam, Andhra Pradesh, India</p>
+            <p><strong>Email:</strong>dineshkumar.icon@gmail.com</p>
+            <p><strong>Location:</strong>Anantapur, Andhra Pradesh, India</p>
 
               <!-- Social profile links on contact page -->
               <div class="social-links">
@@ -53,21 +52,29 @@
           </div>
           <!-- Contact form -->
           <div class="contact-form">
-            <form>
+            <!-- Contact form -->
+            <form action="https://formspree.io/f/mgvzlwvw" method="POST">
+               <!-- Spam bot prevention -->
+              <input type="text" name="_honey" style="display:none">
+  
+            <!-- Redirect to thank-you page -->
+              <input type="hidden" name="_next" value="https://dineshportfolio.netlify.app/thank-you.html">
+
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required>
+              <input type="text" id="name" name="name" required>
 
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+              <input type="email" id="email" name="email" required>
 
               <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Subject">
+              <input type="text" id="subject" name="subject">
 
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+              <textarea id="message" name="message" required></textarea>
 
               <button type="submit">Send Message</button>
             </form>
+            <!-- End of contact form -->  
           </div>
         </div>
       </div>
