@@ -58,4 +58,13 @@
   .experience-item h3 {
     font-size: 1.1rem;
   }
+
+  .experience-item li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+    display: block;
+  }
 }

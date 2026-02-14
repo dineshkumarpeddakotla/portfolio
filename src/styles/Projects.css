@@ -97,18 +97,29 @@
 
 @media (max-width: 768px) {
   .project-slider {
-    flex-direction: column;
-    gap: 0;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: stretch;
   }
 
   .project-nav {
-    order: 2;
-    width: 100%;
-    margin: 1rem 0 0 0;
+    min-width: 50px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .project-nav.prev {
+    order: 1;
+  }
+
+  .project-nav.next {
+    order: 3;
   }
 
   .project-slides {
-    order: 1;
+    order: 2;
+    flex: 1;
   }
 
   .project-slide {
@@ -118,11 +129,11 @@
   .project-slide h3 {
     font-size: 1.1rem;
   }
-}
 
-@media (max-width: 768px) {
-  .project-slides {
-    grid-template-columns: 1fr;
+  .project-slide li::before {
+    content: '•';
+    color: var(--accent);
+    font-weight: bold;
   }
 }
 

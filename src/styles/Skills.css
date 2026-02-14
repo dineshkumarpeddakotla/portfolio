@@ -138,16 +138,30 @@
   }
 
   .tool-slider {
-    flex-direction: column;
-    gap: 0;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: stretch;
   }
 
   .tool-nav {
-    order: 2;
+    min-width: 50px;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+    order: unset;
+  }
+
+  .tool-nav.prev {
+    order: 1;
+  }
+
+  .tool-nav.next {
+    order: 3;
   }
 
   .tool-slides {
-    order: 1;
+    order: 2;
+    flex: 1;
     padding: 1.5rem;
   }
 }
