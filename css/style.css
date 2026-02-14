@@ -259,6 +259,17 @@ nav a:hover {
   margin-top: 0.3rem;
 }
 
+.education-item ul {
+  list-style: square;
+  margin-top: 0.8rem;
+  line-height: 1.6;
+}
+
+.education-item li {
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
 /* Project slider styles */
 .project-slider {
   display: flex;
