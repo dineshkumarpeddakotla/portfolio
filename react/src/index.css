@@ -1,0 +1,135 @@
+/*
+  Custom styles for Dinesh Kumar's web portfolio.  
+  The design draws inspiration from the PDF portfolio with a modern dark blue palette and clean typography.
+*/
+
+:root {
+  --primary: #2D1B69;
+  --secondary: #4A2E8C;
+  --accent: #00D4AA;
+  --light: #F5F5F7;
+  --text: #1A1A1A;
+  --transition: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: #0080c6;
+}
+
+/* Section base styling */
+.section {
+  padding: 4rem 2rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+}
+
+.section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CTA Button styling */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color var(--transition);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #0080c6;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: var(--secondary);
+}
+
+.cta-button.secondary:hover {
+  background-color: var(--primary);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 95%;
+  }
+}

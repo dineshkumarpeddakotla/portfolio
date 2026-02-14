@@ -1,0 +1,52 @@
+/* Floating navigation */
+.floating-nav {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: var(--secondary);
+  padding: 1rem 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-nav.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.floating-nav a {
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  margin: 0.25rem 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.floating-nav a:hover {
+  background-color: var(--accent);
+  transform: translateX(-4px);
+}
+
+@media (max-width: 768px) {
+  .floating-nav {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .floating-nav a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}

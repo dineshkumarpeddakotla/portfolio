@@ -1,0 +1,73 @@
+/* Education section */
+.education-item {
+  margin-bottom: 2.5rem;
+  background-color: var(--light);
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+  font-size: 1.3rem;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.education-item .period {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: block;
+  font-weight: 600;
+}
+
+.education-item p {
+  margin-top: 0.3rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.education-item ul {
+  list-style: none;
+  margin-top: 0.8rem;
+  line-height: 1.6;
+  color: var(--text);
+  padding: 0;
+}
+
+.education-item li {
+  margin-bottom: 0.6rem;
+  color: var(--text);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.education-item li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .education-item {
+    padding: 1.5rem 1rem;
+  }
+
+  .education-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .education-item:hover {
+    transform: translateX(4px);
+  }
+}

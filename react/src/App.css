@@ -1,0 +1,77 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Section base styles */
+section {
+  padding: 4rem 2rem;
+  scroll-margin-top: 70px;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: var(--secondary);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), var(--secondary));
+  border-radius: 2px;
+}
+
+/* Alternating section backgrounds */
+section:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+section:nth-child(odd) {
+  background-color: #fff;
+}
+
+section:nth-child(1) {
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  section h2::after {
+    width: 50px;
+  }
+}
