@@ -8,7 +8,7 @@
 }
 
 .project-nav {
-  background: var(--secondary);
+  background: linear-gradient(135deg, #7B68EE 0%, #00D4AA 100%);
   color: #fff;
   border: none;
   font-size: 1.8rem;
@@ -24,7 +24,7 @@
 }
 
 .project-nav:hover {
-  background: var(--primary);
+  background: linear-gradient(135deg, #00D4AA 0%, #7B68EE 100%);
   transform: scale(1.05);
 }
 

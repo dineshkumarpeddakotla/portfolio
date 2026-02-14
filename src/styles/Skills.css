@@ -141,27 +141,52 @@
     flex-direction: row;
     gap: 0.5rem;
     align-items: stretch;
+    position: relative;
   }
 
   .tool-nav {
-    min-width: 50px;
+    position: static;
+    background: linear-gradient(135deg, #7B68EE 0%, #00D4AA 100%);
+    color: #fff;
+    border: none;
     padding: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    min-width: 50px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-weight: bold;
     flex-shrink: 0;
-    order: unset;
   }
 
   .tool-nav.prev {
     order: 1;
+    animation: none;
   }
 
   .tool-nav.next {
     order: 3;
+    animation: none;
+  }
+
+  .tool-nav:hover {
+    background: linear-gradient(135deg, #00D4AA 0%, #7B68EE 100%);
+    transform: scale(1.05);
+  }
+
+  .tool-nav:active {
+    transform: scale(0.95);
   }
 
   .tool-slides {
     order: 2;
     flex: 1;
+    position: relative;
     padding: 1.5rem;
   }
 }
